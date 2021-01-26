@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6DB1B9"
-    tools:context=".MedicationActivity">
+    tools:context=".MyMedicationPatientActivity">
 
     <Button
         android:id="@+id/button_back2"
@@ -51,63 +51,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:gravity="center_horizontal"
-        android:text="You can add your Prescription by:"
-        android:textSize="22sp"
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="398dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="200dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:text="Upload by my family doctor"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <Button
-        android:id="@+id/buttonPatient"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:text="Upload by myself"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/buttonLoadPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="182dp"
-        android:layout_marginLeft="182dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginRight="182dp"
-        android:text="OR"
-        android:textSize="36sp"
+        android:layout_gravity="center"
+        android:layout_marginStart="146dp"
+        android:layout_marginLeft="146dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
+        android:layout_marginBottom="133dp"
+        android:layout_weight="0"
+        android:text="Load Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="parent"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

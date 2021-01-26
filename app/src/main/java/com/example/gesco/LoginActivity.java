@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.goolge.com"));
+                intent.setData(Uri.parse("http://www.youtube.com"));
                 startActivity(intent);
             }
         });
