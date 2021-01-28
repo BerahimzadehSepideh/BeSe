@@ -80,4 +80,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <EditText
+        android:id="@+id/Minute_edit_text"
+        android:layout_width="85dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="79dp"
+        android:ems="10"
+        android:hint="Minute"
+        android:inputType="time"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/set_alarm_button" />
+
+    <Button
+        android:id="@+id/set_alarm_button"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="70dp"
+        android:text="Set Alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/Hour_edit_text"
+        android:layout_width="85dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="79dp"
+        android:ems="10"
+        android:hint="Hour"
+        android:inputType="time"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Minute_edit_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

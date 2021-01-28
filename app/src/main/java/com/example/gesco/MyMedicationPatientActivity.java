@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.view.View;
 import android.widget.Button;
 import android.app.Activity;
@@ -12,15 +13,39 @@ import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 public class MyMedicationPatientActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMAGE = 1;
+    EditText mHourEditText;
+    EditText mMinuteEditText;
+    Button mSetAlarmButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uploadmyself);
+
+        mHourEditText =(EditText) findViewById(R.id.Hour_edit_text);
+        mMinuteEditText =(EditText) findViewById(R.id.Minute_edit_text);
+        mSetAlarmButton =(Button) findViewById(R.id.set_alarm_button);
+
+        mSetAlarmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int hour = Integer.parseInt(mHourEditText.getText().toString());
+                int minute = Integer.parseInt(mMinuteEditText.getText().toString());
+
+                Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM);
+                intent.putExtra(AlarmClock.EXTRA_HOUR, hour);
+                intent.putExtra(AlarmClock.EXTRA_MINUTES, minute);
+                if (hour <= 24 && minute <= 60) {
+                    startActivity(intent);
+                }
+            }
+        });
 
         Button button_back = (Button) findViewById(R.id.button_back2);
         button_back.setOnClickListener(new View.OnClickListener() {
@@ -58,4 +83,6 @@ public class MyMedicationPatientActivity extends AppCompatActivity {
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
         }
     }
+
+
 }
