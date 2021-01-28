@@ -24,6 +24,7 @@ public class MedicationActivity extends AppCompatActivity {
             }
             });
 
+
         Button button_back = (Button) findViewById(R.id.button_back2);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override

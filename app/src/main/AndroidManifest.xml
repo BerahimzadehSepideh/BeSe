@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MyMedicationPatientActivity"/>
+
         <activity android:name=".MedicationActivity"/>
         <activity android:name=".ReminderActivity" />
         <activity android:name=".PersondataActivity" />
